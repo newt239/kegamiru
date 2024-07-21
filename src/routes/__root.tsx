@@ -9,7 +9,7 @@ export const Route = createRootRoute({
   component: () => (
     <>
       <MenuAppBar />
-      <Box p={2}>
+      <Box py={2}>
         <Outlet />
       </Box>
       <BottomBar />

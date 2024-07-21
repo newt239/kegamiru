@@ -1,44 +1,47 @@
-import { Button, Slider, TextField, Typography } from "@mui/material";
+import ImageIcon from "@mui/icons-material/Image";
+import {
+  Avatar,
+  Box,
+  List,
+  ListItem,
+  ListItemAvatar,
+  ListItemText,
+  Typography,
+} from "@mui/material";
 import { createFileRoute } from "@tanstack/react-router";
 
 export const Route = createFileRoute("/list")({
   component: () => (
     <>
-      <Typography variant="h5">ケガをした場所</Typography>
-      <TextField
-        fullWidth
-        id="outlined-multiline-flexible"
-        label="Multiline"
-        multiline
-        rows={4}
-      />
-      <Typography variant="h5">痛みの強さ</Typography>
-      <Slider
-        aria-label="Temperature"
-        defaultValue={30}
-        marks
-        max={110}
-        min={10}
-        shiftStep={30}
-        step={10}
-        valueLabelDisplay="auto"
-      />
-
-      <Typography variant="h5">痛みの深さ</Typography>
-      <Slider
-        aria-label="Temperature"
-        defaultValue={30}
-        marks
-        max={110}
-        min={10}
-        shiftStep={30}
-        step={10}
-        valueLabelDisplay="auto"
-      />
-
-      <Button fullWidth variant="contained">
-        登録する
-      </Button>
+      <Box px={2}>
+        <Typography variant="h4">ケガの記録</Typography>
+      </Box>
+      <List sx={{ width: "100%", maxWidth: 360, bgcolor: "background.paper" }}>
+        <ListItem>
+          <ListItemAvatar>
+            <Avatar>
+              <ImageIcon />
+            </Avatar>
+          </ListItemAvatar>
+          <ListItemText primary="Photos" secondary="Jan 9, 2014" />
+        </ListItem>
+        <ListItem>
+          <ListItemAvatar>
+            <Avatar>
+              <ImageIcon />
+            </Avatar>
+          </ListItemAvatar>
+          <ListItemText primary="Work" secondary="Jan 7, 2014" />
+        </ListItem>
+        <ListItem>
+          <ListItemAvatar>
+            <Avatar>
+              <ImageIcon />
+            </Avatar>
+          </ListItemAvatar>
+          <ListItemText primary="Vacation" secondary="July 20, 2014" />
+        </ListItem>
+      </List>
     </>
   ),
 });
