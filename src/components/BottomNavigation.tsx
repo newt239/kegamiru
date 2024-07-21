@@ -1,12 +1,28 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
-import ArchiveIcon from "@mui/icons-material/Archive";
-import FavoriteIcon from "@mui/icons-material/Favorite";
 import HomeIcon from "@mui/icons-material/Home";
+import ListIcon from "@mui/icons-material/List";
+import SearchIcon from "@mui/icons-material/Search";
 import { BottomNavigation, BottomNavigationAction, Paper } from "@mui/material";
+import { useNavigate } from "@tanstack/react-router";
 
 export default function BottomBar() {
   const [value, setValue] = useState("home");
+  const navigate = useNavigate({ from: "/" });
+
+  useEffect(() => {
+    switch (window.location.pathname) {
+      case "/":
+        setValue("home");
+        break;
+      case "/list":
+        setValue("list");
+        break;
+      case "/search":
+        setValue("search");
+        break;
+    }
+  }, [window.location.pathname]);
 
   return (
     <Paper
@@ -16,6 +32,7 @@ export default function BottomBar() {
       <BottomNavigation
         onChange={(event, newValue) => {
           setValue(newValue);
+          navigate({ to: `/${newValue !== "home" ? newValue : ""}` });
         }}
         showLabels
         value={value}
@@ -25,8 +42,12 @@ export default function BottomBar() {
           label="ホーム"
           value="home"
         />
-        <BottomNavigationAction icon={<FavoriteIcon />} label="Favorites" />
-        <BottomNavigationAction icon={<ArchiveIcon />} label="Archive" />
+        <BottomNavigationAction icon={<ListIcon />} label="履歴" value="list" />
+        <BottomNavigationAction
+          icon={<SearchIcon />}
+          label="検索"
+          value="search"
+        />
       </BottomNavigation>
     </Paper>
   );
