@@ -6,9 +6,10 @@ import {
   ListItemAvatar,
   ListItemButton,
   ListItemText,
-  Typography,
 } from "@mui/material";
 import { createFileRoute, useNavigate } from "@tanstack/react-router";
+
+import H4 from "#/components/H4";
 
 type EachEnjureProps = {
   position: string;
@@ -43,7 +44,7 @@ export const Route = createFileRoute("/list")({
     return (
       <>
         <Box px={2}>
-          <Typography variant="h4">ケガの記録</Typography>
+          <H4>ケガの記録</H4>
         </Box>
         <List sx={{ width: "100%", bgcolor: "background.paper" }}>
           {injures.map((injure, index) => (

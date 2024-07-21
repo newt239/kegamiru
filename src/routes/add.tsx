@@ -1,5 +1,7 @@
-import { Box, Button, Slider, TextField, Typography } from "@mui/material";
+import { Box, Button, Slider, TextField } from "@mui/material";
 import { createFileRoute, useNavigate } from "@tanstack/react-router";
+
+import H5 from "#/components/H5";
 
 export const Route = createFileRoute("/add")({
   component: () => {
@@ -7,8 +9,7 @@ export const Route = createFileRoute("/add")({
     return (
       <>
         <Box px={2}>
-          <Typography variant="h5">ケガをした場所</Typography>
-
+          <H5>ケガをした場所</H5>
           <TextField
             fullWidth
             id="outlined-multiline-flexible"
@@ -16,7 +17,7 @@ export const Route = createFileRoute("/add")({
             multiline
             rows={4}
           />
-          <Typography variant="h5">痛みの強さ</Typography>
+          <H5>痛みの強さ</H5>
           <Slider
             aria-label="Temperature"
             defaultValue={30}
@@ -27,8 +28,7 @@ export const Route = createFileRoute("/add")({
             step={10}
             valueLabelDisplay="auto"
           />
-
-          <Typography variant="h5">痛みの深さ</Typography>
+          <H5>痛みの深さ</H5>
           <Slider
             aria-label="Temperature"
             defaultValue={30}
@@ -39,7 +39,6 @@ export const Route = createFileRoute("/add")({
             step={10}
             valueLabelDisplay="auto"
           />
-
           <Button
             fullWidth
             onClick={() => navigate({ to: "/list" })}
