@@ -67,8 +67,8 @@ export default function MenuAppBar() {
                 horizontal: "right",
               }}
             >
-              <MenuItem onClick={handleClose}>Profile</MenuItem>
-              <MenuItem onClick={handleClose}>My account</MenuItem>
+              <MenuItem onClick={handleClose}>プロフィール</MenuItem>
+              <MenuItem onClick={handleClose}>アカウント設定</MenuItem>
             </Menu>
           </div>
         )}
