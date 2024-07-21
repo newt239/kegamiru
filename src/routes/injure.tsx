@@ -14,6 +14,8 @@ export const Route = createFileRoute("/injure")({
         >
           戻る
         </Button>
+        <Typography variant="h4">ケガをした場所</Typography>
+        <Box>右ヒザ</Box>
         <Typography variant="h4">ケガの情報</Typography>
         <Box>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nonne
