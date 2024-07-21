@@ -38,7 +38,7 @@ export default function MenuAppBar() {
           <MenuIcon />
         </IconButton>
         <Typography component="div" sx={{ flexGrow: 1 }} variant="h6">
-          Photos
+          ケガミル
         </Typography>
         {auth && (
           <div>

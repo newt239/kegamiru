@@ -1,16 +1,13 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 import ArchiveIcon from "@mui/icons-material/Archive";
 import FavoriteIcon from "@mui/icons-material/Favorite";
-import RestoreIcon from "@mui/icons-material/Restore";
+import HomeIcon from "@mui/icons-material/Home";
 import { BottomNavigation, BottomNavigationAction, Paper } from "@mui/material";
 
 export default function BottomBar() {
-  const [value, setValue] = useState("recents");
+  const [value, setValue] = useState("home");
 
-  useEffect(() => {
-    setValue("");
-  }, [value]);
   return (
     <Paper
       elevation={3}
@@ -23,7 +20,11 @@ export default function BottomBar() {
         showLabels
         value={value}
       >
-        <BottomNavigationAction icon={<RestoreIcon />} label="Recents" />
+        <BottomNavigationAction
+          icon={<HomeIcon />}
+          label="ホーム"
+          value="home"
+        />
         <BottomNavigationAction icon={<FavoriteIcon />} label="Favorites" />
         <BottomNavigationAction icon={<ArchiveIcon />} label="Archive" />
       </BottomNavigation>
