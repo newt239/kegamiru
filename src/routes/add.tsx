@@ -4,7 +4,9 @@ import { DatePicker, TimePicker } from "@mui/x-date-pickers";
 import { createFileRoute, useNavigate } from "@tanstack/react-router";
 import dayjs from "dayjs";
 
+import bodyImage2 from "#/assets/body2.png";
 import H5 from "#/components/H5";
+import Marker from "#/components/Marker";
 
 export const Route = createFileRoute("/add")({
   component: () => {
@@ -13,6 +15,10 @@ export const Route = createFileRoute("/add")({
       <>
         <Box px={2}>
           <H5>ケガをした場所</H5>
+          <Stack sx={{ position: "relative" }}>
+            <img src={bodyImage2} />
+            <Marker left="78%" top="47%" />
+          </Stack>
           <TextField
             defaultValue="右ヒザ"
             fullWidth

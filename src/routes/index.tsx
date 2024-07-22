@@ -19,7 +19,7 @@ export const Route = createFileRoute("/")({
           <H5>ケガマップ</H5>
         </Box>
         <Stack sx={{ position: "relative" }}>
-          <img alt="aa" src={bodyImage} />
+          <img src={bodyImage} />
           <Marker left="23%" top="65%" />
         </Stack>
         <Fab
