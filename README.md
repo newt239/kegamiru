@@ -1,11 +1,3 @@
-# react-vite-templete
+# kegamiru
 
-## dependencies
-
-- pnpm
-- React
-- Vite
-- TypeScript
-- Tanstack Router
-- ESLint
-- Prettier
+This application is a product of group 9 developed for the course of "Introduction to the Concept Design".
