@@ -35,6 +35,8 @@ export const Route = createFileRoute("/other-injure")({
         </Box>
         <H4>コメント</H4>
         <Box>コメントはありません</Box>
+        <h4>関連するケガ</h4>
+        <Box>関連するケガはありません</Box>
       </Box>
     );
   },
