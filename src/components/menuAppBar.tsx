@@ -2,6 +2,7 @@ import * as React from "react";
 
 import AccountCircle from "@mui/icons-material/AccountCircle";
 import MenuIcon from "@mui/icons-material/Menu";
+import { Box } from "@mui/material";
 import AppBar from "@mui/material/AppBar";
 import IconButton from "@mui/material/IconButton";
 import Menu from "@mui/material/Menu";
@@ -10,12 +11,7 @@ import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 
 export default function MenuAppBar() {
-  const [auth, setAuth] = React.useState(true);
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
-
-  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setAuth(event.target.checked);
-  };
 
   const handleMenu = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorEl(event.currentTarget);
@@ -40,38 +36,36 @@ export default function MenuAppBar() {
         <Typography component="div" sx={{ flexGrow: 1 }} variant="h6">
           ケガミル
         </Typography>
-        {auth && (
-          <div>
-            <IconButton
-              aria-controls="menu-appbar"
-              aria-haspopup="true"
-              aria-label="account of current user"
-              color="inherit"
-              onClick={handleMenu}
-              size="large"
-            >
-              <AccountCircle />
-            </IconButton>
-            <Menu
-              anchorEl={anchorEl}
-              anchorOrigin={{
-                vertical: "top",
-                horizontal: "right",
-              }}
-              id="menu-appbar"
-              keepMounted
-              onClose={handleClose}
-              open={Boolean(anchorEl)}
-              transformOrigin={{
-                vertical: "top",
-                horizontal: "right",
-              }}
-            >
-              <MenuItem onClick={handleClose}>プロフィール</MenuItem>
-              <MenuItem onClick={handleClose}>アカウント設定</MenuItem>
-            </Menu>
-          </div>
-        )}
+        <Box>
+          <IconButton
+            aria-controls="menu-appbar"
+            aria-haspopup="true"
+            aria-label="account of current user"
+            color="inherit"
+            onClick={handleMenu}
+            size="large"
+          >
+            <AccountCircle />
+          </IconButton>
+          <Menu
+            anchorEl={anchorEl}
+            anchorOrigin={{
+              vertical: "top",
+              horizontal: "right",
+            }}
+            id="menu-appbar"
+            keepMounted
+            onClose={handleClose}
+            open={Boolean(anchorEl)}
+            transformOrigin={{
+              vertical: "top",
+              horizontal: "right",
+            }}
+          >
+            <MenuItem onClick={handleClose}>プロフィール</MenuItem>
+            <MenuItem onClick={handleClose}>アカウント設定</MenuItem>
+          </Menu>
+        </Box>
       </Toolbar>
     </AppBar>
   );
