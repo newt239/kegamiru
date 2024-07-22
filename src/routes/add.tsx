@@ -1,5 +1,5 @@
 import AddCircleOutlineIcon from "@mui/icons-material/AddCircleOutline";
-import { Box, Button, Slider, Stack, TextField } from "@mui/material";
+import { Box, Button, Chip, Slider, Stack, TextField } from "@mui/material";
 import { DatePicker, TimePicker } from "@mui/x-date-pickers";
 import { createFileRoute, useNavigate } from "@tanstack/react-router";
 import dayjs from "dayjs";
@@ -14,6 +14,7 @@ export const Route = createFileRoute("/add")({
         <Box px={2}>
           <H5>ケガをした場所</H5>
           <TextField
+            defaultValue="右ヒザ"
             fullWidth
             id="outlined-basic"
             sx={{ mb: 2 }}
@@ -60,6 +61,13 @@ export const Route = createFileRoute("/add")({
             step={10}
             valueLabelDisplay="auto"
           />
+          <H5>痛み方</H5>
+          <Stack direction="row" gap={1} my={2}>
+            <Chip color="primary" label="断続的" />
+            <Chip label="持続的" />
+            <Chip color="primary" label="ずきずき" />
+            <Chip label="じんじん" />
+          </Stack>
           <Button
             fullWidth
             onClick={() => navigate({ to: "/list" })}

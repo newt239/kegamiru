@@ -7,7 +7,13 @@ import AppIconModal from "#/components/AppIconModal";
 import BottomBar from "#/components/BottomNavigation";
 import MenuAppBar from "#/components/menuAppBar";
 
-const theme = createTheme();
+const theme = createTheme({
+  palette: {
+    primary: {
+      main: "#5487C2",
+    },
+  },
+});
 
 export const Route = createRootRoute({
   component: () => (
