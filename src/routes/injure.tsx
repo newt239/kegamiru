@@ -17,7 +17,7 @@ export const Route = createFileRoute("/injure")({
             戻る
           </Button>
           <Button
-            onClick={() => navigate({ to: "/list" })}
+            onClick={() => navigate({ to: "/add" })}
             startIcon={<EditIcon />}
             variant="text"
           >
