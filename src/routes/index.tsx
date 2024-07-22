@@ -1,29 +1,9 @@
 import AddIcon from "@mui/icons-material/Add";
-import { Box, Fab, Stack } from "@mui/material";
+import { Fab, Stack } from "@mui/material";
 import { createFileRoute, useNavigate } from "@tanstack/react-router";
 
 import bodyImage from "#/assets/body.jpg";
-
-type MarkerProps = {
-  top: string;
-  left: string;
-};
-
-const Marker: React.FC<MarkerProps> = ({ top, left }) => {
-  return (
-    <Box
-      style={{
-        position: "absolute",
-        top,
-        left,
-        width: "30px",
-        height: "30px",
-        borderRadius: "50%",
-        backgroundColor: "red",
-      }}
-    ></Box>
-  );
-};
+import Marker from "#/components/Marker";
 
 export const Route = createFileRoute("/")({
   component: () => {

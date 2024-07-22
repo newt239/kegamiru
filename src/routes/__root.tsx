@@ -13,6 +13,16 @@ const theme = createTheme({
       main: "#5487C2",
     },
   },
+  typography: {
+    fontFamily: [
+      '"Helvetica Neue"',
+      "Arial",
+      '"Hiragino Kaku Gothic ProN"',
+      '"Hiragino Sans"',
+      "Meiryo",
+      "sans-serif",
+    ].join(","),
+  },
 });
 
 export const Route = createRootRoute({

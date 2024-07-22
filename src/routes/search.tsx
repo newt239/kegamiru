@@ -21,7 +21,9 @@ import {
 } from "@mui/material";
 import { createFileRoute, useNavigate } from "@tanstack/react-router";
 
+import bodyImage from "#/assets/body.jpg";
 import H4 from "#/components/H4";
+import Marker from "#/components/Marker";
 
 type EachEnjureProps = {
   icon: React.ReactNode;
@@ -53,6 +55,7 @@ const injures: EachEnjureProps[] = [
 export const Route = createFileRoute("/search")({
   component: () => {
     const [value, setValue] = useState("");
+    const navigate = useNavigate({ from: "/" });
     return (
       <>
         <Box pr={2}>
@@ -73,7 +76,7 @@ export const Route = createFileRoute("/search")({
             />
           </FormControl>
         </Box>
-        {value === "ヒザ" && (
+        {value === "ヒザ" ? (
           <>
             <Box px={2}>
               <H4>ヒザの検索結果</H4>
@@ -97,6 +100,14 @@ export const Route = createFileRoute("/search")({
               ))}
             </List>
           </>
+        ) : (
+          <Stack sx={{ position: "relative" }}>
+            <img alt="aa" src={bodyImage} />
+            <Marker left="25%" onClick={() => setValue("ヒザ")} top="75%" />
+            <Marker left="7%" top="58%" />
+            <Marker left="24%" top="93%" />
+            <Marker left="13%" top="22%" />
+          </Stack>
         )}
       </>
     );

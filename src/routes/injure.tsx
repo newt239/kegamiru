@@ -35,12 +35,7 @@ export const Route = createFileRoute("/injure")({
         <H4>痛みの深さ</H4>
         <Box>30</Box>
         <H4>ケガの情報</H4>
-        <Box>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nonne
-          merninisti licere mihi ista probare, quae sunt a te dicta? Duo Reges:
-          constructio interrete. Quae cum dixisset paulumque institisset, Quid
-          est? Quae cum essent dicta, discessimus.
-        </Box>
+        <Box></Box>
       </Box>
     );
   },
