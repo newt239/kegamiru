@@ -1,3 +1,4 @@
+import AddCircleOutlineIcon from "@mui/icons-material/AddCircleOutline";
 import { Box, Button, Slider, TextField } from "@mui/material";
 import { createFileRoute, useNavigate } from "@tanstack/react-router";
 
@@ -13,7 +14,6 @@ export const Route = createFileRoute("/add")({
           <TextField
             fullWidth
             id="outlined-multiline-flexible"
-            label="Multiline"
             multiline
             rows={4}
           />
@@ -42,6 +42,8 @@ export const Route = createFileRoute("/add")({
           <Button
             fullWidth
             onClick={() => navigate({ to: "/list" })}
+            startIcon={<AddCircleOutlineIcon />}
+            sx={{ mt: 2 }}
             variant="contained"
           >
             登録する
