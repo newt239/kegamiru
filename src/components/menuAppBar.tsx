@@ -22,7 +22,7 @@ export default function MenuAppBar() {
   };
 
   return (
-    <AppBar position="static">
+    <AppBar position="fixed">
       <Toolbar>
         <IconButton
           aria-label="menu"

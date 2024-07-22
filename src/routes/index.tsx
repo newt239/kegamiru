@@ -1,8 +1,10 @@
 import AddIcon from "@mui/icons-material/Add";
-import { Fab, Stack } from "@mui/material";
+import { Box, Fab, Stack } from "@mui/material";
 import { createFileRoute, useNavigate } from "@tanstack/react-router";
 
 import bodyImage from "#/assets/body.png";
+import H4 from "#/components/H4";
+import H5 from "#/components/H5";
 import Marker from "#/components/Marker";
 
 export const Route = createFileRoute("/")({
@@ -10,6 +12,12 @@ export const Route = createFileRoute("/")({
     const navigate = useNavigate({ from: "/" });
     return (
       <>
+        <Box px={2}>
+          <H4>ケガミル</H4>
+        </Box>
+        <Box pt={6} px={2}>
+          <H5>ケガマップ</H5>
+        </Box>
         <Stack sx={{ position: "relative" }}>
           <img alt="aa" src={bodyImage} />
           <Marker left="23%" top="65%" />

@@ -106,7 +106,7 @@ export const Route = createFileRoute("/search")({
             <Marker left="23%" onClick={() => setValue("ヒザ")} top="65%" />
             <Marker left="6%" top="53%" />
             <Marker left="24%" top="83%" />
-            <Marker left="9%" top="19%" />
+            <Marker left="19%" top="9%" />
           </Stack>
         )}
       </>

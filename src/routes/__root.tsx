@@ -30,7 +30,7 @@ export const Route = createRootRoute({
     <ThemeProvider theme={theme}>
       <LocalizationProvider dateAdapter={AdapterDayjs}>
         <MenuAppBar />
-        <Box py={2}>
+        <Box pb="80px" pt="66px">
           <Outlet />
         </Box>
         <BottomBar />
