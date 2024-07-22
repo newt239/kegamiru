@@ -1,22 +1,27 @@
 import AddIcon from "@mui/icons-material/Add";
-import { Fab, Stack } from "@mui/material";
+import { Box, Fab, Stack } from "@mui/material";
 import { createFileRoute, useNavigate } from "@tanstack/react-router";
 
 import bodyImage from "#/assets/body.jpg";
 
-const Marker = () => {
+type MarkerProps = {
+  top: string;
+  left: string;
+};
+
+const Marker: React.FC<MarkerProps> = ({ top, left }) => {
   return (
-    <div
+    <Box
       style={{
         position: "absolute",
-        top: "75%",
-        left: "25%",
+        top,
+        left,
         width: "30px",
         height: "30px",
         borderRadius: "50%",
         backgroundColor: "red",
       }}
-    ></div>
+    ></Box>
   );
 };
 
@@ -27,7 +32,7 @@ export const Route = createFileRoute("/")({
       <>
         <Stack sx={{ position: "relative" }}>
           <img alt="aa" src={bodyImage} />
-          <Marker />
+          <Marker left="25%" top="75%" />
         </Stack>
         <Fab
           aria-label="add"
