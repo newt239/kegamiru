@@ -20,7 +20,9 @@ export const Route = createFileRoute("/")({
         </Box>
         <Stack sx={{ position: "relative" }}>
           <img src={bodyImage} />
-          <Marker left="23%" top="65%" />
+          <Marker left="25%" top="82%" />
+          <Marker left="12%" top="19%" />
+          <Marker left="79%" top="36%" />
         </Stack>
         <Fab
           aria-label="add"

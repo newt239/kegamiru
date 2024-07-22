@@ -17,7 +17,7 @@ export const Route = createFileRoute("/add")({
           <H5>ケガをした場所</H5>
           <Stack sx={{ position: "relative" }}>
             <img src={bodyImage2} />
-            <Marker left="78%" top="47%" />
+            <Marker left="23%" top="65%" />
           </Stack>
           <TextField
             defaultValue="右ヒザ"
