@@ -12,6 +12,7 @@
 
 import { Route as rootRoute } from './routes/__root'
 import { Route as SearchImport } from './routes/search'
+import { Route as OtherInjureImport } from './routes/other-injure'
 import { Route as ListImport } from './routes/list'
 import { Route as InjureImport } from './routes/injure'
 import { Route as AddImport } from './routes/add'
@@ -21,6 +22,11 @@ import { Route as IndexImport } from './routes/index'
 
 const SearchRoute = SearchImport.update({
   path: '/search',
+  getParentRoute: () => rootRoute,
+} as any)
+
+const OtherInjureRoute = OtherInjureImport.update({
+  path: '/other-injure',
   getParentRoute: () => rootRoute,
 } as any)
 
@@ -76,6 +82,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ListImport
       parentRoute: typeof rootRoute
     }
+    '/other-injure': {
+      id: '/other-injure'
+      path: '/other-injure'
+      fullPath: '/other-injure'
+      preLoaderRoute: typeof OtherInjureImport
+      parentRoute: typeof rootRoute
+    }
     '/search': {
       id: '/search'
       path: '/search'
@@ -93,6 +106,7 @@ export const routeTree = rootRoute.addChildren({
   AddRoute,
   InjureRoute,
   ListRoute,
+  OtherInjureRoute,
   SearchRoute,
 })
 
@@ -108,6 +122,7 @@ export const routeTree = rootRoute.addChildren({
         "/add",
         "/injure",
         "/list",
+        "/other-injure",
         "/search"
       ]
     },
@@ -122,6 +137,9 @@ export const routeTree = rootRoute.addChildren({
     },
     "/list": {
       "filePath": "list.tsx"
+    },
+    "/other-injure": {
+      "filePath": "other-injure.tsx"
     },
     "/search": {
       "filePath": "search.tsx"

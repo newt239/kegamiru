@@ -1,29 +1,21 @@
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
-import EditIcon from "@mui/icons-material/Edit";
 import { Box, Button, Stack } from "@mui/material";
 import { createFileRoute, useNavigate } from "@tanstack/react-router";
 
 import H4 from "#/components/H4";
 
-export const Route = createFileRoute("/injure")({
+export const Route = createFileRoute("/other-injure")({
   component: () => {
     const navigate = useNavigate({ from: "/" });
     return (
       <Box px={2}>
-        <Stack direction="row" justifyContent="space-between" mb={2}>
+        <Stack direction="row" justifyContent="flex-start" mb={2}>
           <Button
-            onClick={() => navigate({ to: "/list" })}
+            onClick={() => navigate({ to: "/search" })}
             startIcon={<ArrowBackIcon />}
             variant="text"
           >
-            戻る
-          </Button>
-          <Button
-            onClick={() => navigate({ to: "/add" })}
-            startIcon={<EditIcon />}
-            variant="text"
-          >
-            編集する
+            検索結果に戻る
           </Button>
         </Stack>
         <H4>ケガをした場所</H4>
@@ -41,6 +33,8 @@ export const Route = createFileRoute("/injure")({
           constructio interrete. Quae cum dixisset paulumque institisset, Quid
           est? Quae cum essent dicta, discessimus.
         </Box>
+        <H4>コメント</H4>
+        <Box>コメントはありません</Box>
       </Box>
     );
   },
