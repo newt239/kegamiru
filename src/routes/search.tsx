@@ -21,7 +21,7 @@ import {
 } from "@mui/material";
 import { createFileRoute, useNavigate } from "@tanstack/react-router";
 
-import bodyImage from "#/assets/body.jpg";
+import bodyImage from "#/assets/body.png";
 import H4 from "#/components/H4";
 import Marker from "#/components/Marker";
 
@@ -55,7 +55,7 @@ const injures: EachEnjureProps[] = [
 export const Route = createFileRoute("/search")({
   component: () => {
     const [value, setValue] = useState("");
-    const navigate = useNavigate({ from: "/" });
+
     return (
       <>
         <Box pr={2}>
@@ -103,10 +103,10 @@ export const Route = createFileRoute("/search")({
         ) : (
           <Stack sx={{ position: "relative" }}>
             <img alt="aa" src={bodyImage} />
-            <Marker left="25%" onClick={() => setValue("ヒザ")} top="75%" />
-            <Marker left="7%" top="58%" />
-            <Marker left="24%" top="93%" />
-            <Marker left="13%" top="22%" />
+            <Marker left="23%" onClick={() => setValue("ヒザ")} top="65%" />
+            <Marker left="6%" top="53%" />
+            <Marker left="24%" top="83%" />
+            <Marker left="9%" top="19%" />
           </Stack>
         )}
       </>

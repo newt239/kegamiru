@@ -2,7 +2,7 @@ import AddIcon from "@mui/icons-material/Add";
 import { Fab, Stack } from "@mui/material";
 import { createFileRoute, useNavigate } from "@tanstack/react-router";
 
-import bodyImage from "#/assets/body.jpg";
+import bodyImage from "#/assets/body.png";
 import Marker from "#/components/Marker";
 
 export const Route = createFileRoute("/")({
@@ -12,7 +12,7 @@ export const Route = createFileRoute("/")({
       <>
         <Stack sx={{ position: "relative" }}>
           <img alt="aa" src={bodyImage} />
-          <Marker left="25%" top="75%" />
+          <Marker left="23%" top="65%" />
         </Stack>
         <Fab
           aria-label="add"
