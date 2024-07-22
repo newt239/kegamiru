@@ -35,7 +35,7 @@ export const Route = createFileRoute("/injure")({
         <H4>痛みの深さ</H4>
         <Box>30</Box>
         <H4>ケガの情報</H4>
-        <Box></Box>
+        <Box>切り返しをしたときに、ヒザが痛くなった。</Box>
       </Box>
     );
   },
